@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Poke Jump</title>
+  <link rel="icon" href="logo.png" type="png">
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+      background: url('background.png'); /* Default background */
+    }
+ .sky {
+    width: 5%;
+    height: 10%;
+    position: absolute;
+    top: 40%;
+    transform: scaleX(-1);
+ }
+    .player {
+    width: 5%;
+    height: 10%;
+    position: absolute;
+    top: 69%;
+    left: 10%;
+    transform: scaleX(-1);
+  }
+
+    .obstacle {
+    width: 17%;
+    height: 22%;
+    position: absolute;
+    top: 58%;
+    right: 0;
+    
+  }
+
+    .score {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      color: white;
+      font-size: 1.5em;
+      z-index: 100;
+    }
+
+  
+    .menu {
+      position: absolute;
+      justify-content: center;
+      align-items: center;
+      display: none;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: white;
+      border-radius: 10px;
+      margin: 10px;
+      padding: 10px;
+    }
+    .menu select {
+      margin: 5px 0;
+      padding: 5px;
+      font-size: 1em;
+    }
+
+    .menu label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+  
+  </style>
+</head>
+<body>
+
+<img src="masquerain.gif" id="sky" style="float:right; padding-top: 5%; padding-right: 20%;">
+  <img src="p1.gif" class="player" id="player"> <!-- Default Player -->
+  <img src="o1.gif" class="obstacle" id="obstacle"> <!-- Default Obstacle -->
+  <div class="score">Score: 0</div>
+
+  <!-- Dropdown Menu -->
+  <div class="menu" id="menu">
+   
+    <label for="player-select">Player</label>
+    <select id="player-select">
+      <option value="p1.gif" selected>Deino</option>
+      <option value="p2.gif">Scorbunny</option>
+      <option value="p3.gif">3DSB</option>
+      <option value="p4.gif">Pikachu</option>
+    </select>
+    <label for="obstacle-select">NPC</label>
+    <select id="obstacle-select">
+      <option value="o1.gif" selected>Garchomp</option>
+      <option value="o2.gif">Hydreigon</option>
+      <option value="o3.gif">3DH</option>
+    </select>
+    </div>
+<link rel="icon" href="logo.png" type="png">
+  <script src="java.js"></script>
+</body>
+</html>
